@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Sharma - Portfolio</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            border: 1px solid #000;
+            padding: 25px;
+            background-color: #fff;
+        }
+        h1, h2 {
+            font-weight: normal;
+        }
+        a {
+            color: purple;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        .profile-pic {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+        }
+        #projects ul li {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 98%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        form input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border: 1px solid #000;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mohit Sharma</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+            <section id="welcome">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Hello! This is my personal portfolio website where I showcase my journey and projects.</p>
+            </section>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <img src="https://i.ibb.co/6wmN5z5/avatar-icon.png" alt="Profile Picture" class="profile-pic">
+                <p>
+                    I am a 1st-year student pursuing B.Tech in Computer Science and Engineering (CSE) at KR Mangalam University. I am passionate about learning web development and building creative projects.
+                </p>
+            </section>
+
+            <section id="projects">
+                <h2>My Projects</h2>
+                <ul>
+                    <li><b>Portfolio Website:</b> A personal one-page website to showcase my bio, skills, and contact details.</li>
+                    
+                    <li><b>Calculator App:</b> A simple <a href="calculator/calculator.html" target="_blank"><b>calculator</b></a> built with basic functionalities using HTML, CSS, and JavaScript.</li>
+
+                </ul>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Beginner</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Beginner</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Beginner</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

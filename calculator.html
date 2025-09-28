@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .calculator {
+            width: 260px;
+            margin: 60px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .display {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            text-align: right;
+            font-size: 1.5em;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #f9f9f9;
+        }
+        .buttons button {
+            width: 56px;
+            height: 40px;
+            margin: 2px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 4px;
+            background: #e0e0e0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .buttons button.operator { background: #ffd966; }
+        .buttons button.equal { background: #8fd19e; }
+        .buttons button.clear { background: #f28b82; }
+        .buttons button:active { background: #bdbdbd; }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <form name="calc">
+            <input type="text" class="display" name="display" readonly>
+            <div class="buttons">
+                <button type="button" onclick="calc.display.value += '7'">7</button>
+                <button type="button" onclick="calc.display.value += '8'">8</button>
+                <button type="button" onclick="calc.display.value += '9'">9</button>
+                <button type="button" class="operator" onclick="calc.display.value += '/'">÷</button>
+                <br>
+                <button type="button" onclick="calc.display.value += '4'">4</button>
+                <button type="button" onclick="calc.display.value += '5'">5</button>
+                <button type="button" onclick="calc.display.value += '6'">6</button>
+                <button type="button" class="operator" onclick="calc.display.value += '*'">×</button>
+                <br>
+                <button type="button" onclick="calc.display.value += '1'">1</button>
+                <button type="button" onclick="calc.display.value += '2'">2</button>
+                <button type="button" onclick="calc.display.value += '3'">3</button>
+                <button type="button" class="operator" onclick="calc.display.value += '-'">−</button>
+                <br>
+                <button type="button" onclick="calc.display.value += '0'">0</button>
+                <button type="button" onclick="calc.display.value += '.'">.</button>
+                <button type="button" class="clear" onclick="calc.display.value = ''">C</button>
+                <button type="button" class="operator" onclick="calc.display.value += '+'">+</button>
+                <br>
+                <button type="button" class="equal" style="width: 232px;" onclick="try{calc.display.value = eval(calc.display.value)}catch(e){calc.display.value='Error'}">=</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
